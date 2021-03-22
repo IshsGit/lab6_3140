@@ -1,0 +1,56 @@
+Lab 6
+
+The objective here is to:
+
+* Create a Repository called Repo1
+* Produce a file called “helloworld.java”
+* Add it to the master branch
+* Commit 
+* Save a log.txt in another repository called RepoMeta
+* Push the log.txt to a host i.e github
+
+Creating a Repository:
+I create a folder on desktop called Repo1. I right clicked and hit git bash here that way it opens a terminal at the location of my intended repository. In order for it to be recognized as a repository I used the command git init
+
+Creating helloworld.java
+I used VIM from the Repo1 repository, inserted some text like todays date and hello world, hit ESC, saved the file as helloworld.java and exited. Now helloworld.java is in Repo1 but still need to add it to the branch.
+
+Adding helloworld.java to master
+Right now, I only have the master branch. If I were working on a project then I would create several branches with the git branch “branchname” command. Anytime I want to revert back to a previous build, it is just a matter of using git checkout “branchname” and that would return the respective project file to the state it was on the branch that it was checked or switched into.
+
+Making a commit
+In order to push anything I will first need to commit. The commits are also recorded when creating a log file. After I enter git commit it opens VIM and I simply uncommented useful information in regards to the recent activity which was just an initial commit and adding hellworld.java to master.
+
+Creating log.txt
+To create a log.txt I simply used the git log > “log.txt” command which pushes a history of commits into a log.txt
+
+Moving log.txt to RepoMeta (Repeat above steps mostly)
+I create a folder on desktop called RepoMeta. I right clicked and hit git bash here that way it opens a terminal at the location of my intended repository. In order for it to be recognized as a repository I used the command git init
+
+In order to push anything I will first need to commit. The commits are also recorded when creating a log file. After I enter git commit it opens VIM and I simply uncommented useful information
+
+Push the log.txt to a host i.e github
+Then lastly using the git push origin master I pushed the log.txt from local repository to the hosted repository at github. This requires authentication however afterwards it is pushed into the repo. 
+
+https://github.com/IshsGit/lab6_3140
+
+One thing to note is that it is pushed into the master branch, by default github opens into the main branch. 
+
+Summary
+The most confusing part was just remembering commands that need to be run before commiting and pushing. Seems obvious when using a GUI like githubs but not as obvious in terminal so would be useful to have a list of commands that will always be needed.
+
+Commands used:
+git init – Initialize local directory as repository
+git status – Shows changes made to the repository
+git rm “filename” – Removes a file that was added to the branch
+git add “filename” – Adds a file to the branch
+VIM – Default text editor ; :w “filename” or :wq to save and exit or just :w to exit
+git commit – Opens VIM to record any message than add changes to the respective branch
+git branch – Displays existing branches
+git branch “branchname” – Creates a branch
+git checkout “branchname” – Switches to respective branch
+git log > “logfile” – Saves history of commits into a file within the respository
+git push origin master – Given there is commit history, it will authenticate a hosted git repository and push the files of the respective local repository to the hosted repository. 
+
+
+
